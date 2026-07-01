@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -19,19 +20,39 @@ namespace NBA
             client.DefaultRequestHeaders.Add("Authorization", apiKey);
         }
 
-        public string GetTeams()
+        public List<Team> GetTeams()
         {
             string url = baseUrl + "teams";
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsStringAsync().Result;
+                string json = response.Content.ReadAsStringAsync().Result;
+                var result = JsonConvert.DeserializeObject<TeamResponse>(json);
+                return result.data;
             }
             else
             {
                 MessageBox.Show($"Ошибка: {response.StatusCode}");
-                return null;
+                return new List<Team>();
+            }
+        }
+
+        public List<Player> GetPlayers(int teamId)
+        {
+            string url = baseUrl + $"players?team_ids[]={teamId}&per_page=25";
+            HttpResponseMessage response = client.GetAsync(url).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var result = JsonConvert.DeserializeObject<PlayerResponse>(json);
+                return result.data;
+            }
+            else
+            {
+                MessageBox.Show($"Ошибка: {response.StatusCode}");
+                return new List<Player>();
             }
         }
     }
