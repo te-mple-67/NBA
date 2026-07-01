@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,7 +51,9 @@ namespace NBA
         {
             try
             {
+                Thread.Sleep(1000); 
                 string url = baseUrl + $"players?team_ids[]={teamId}&per_page=25";
+               
                 HttpResponseMessage response = client.GetAsync(url).Result;
 
                 if (response.IsSuccessStatusCode)

@@ -37,7 +37,7 @@
             // 
             // btnLoadTeams
             // 
-            this.btnLoadTeams.Location = new System.Drawing.Point(109, 322);
+            this.btnLoadTeams.Location = new System.Drawing.Point(92, 318);
             this.btnLoadTeams.Name = "btnLoadTeams";
             this.btnLoadTeams.Size = new System.Drawing.Size(131, 35);
             this.btnLoadTeams.TabIndex = 0;
@@ -48,9 +48,9 @@
             // listBoxTeams
             // 
             this.listBoxTeams.FormattingEnabled = true;
-            this.listBoxTeams.Location = new System.Drawing.Point(109, 87);
+            this.listBoxTeams.Location = new System.Drawing.Point(75, 87);
             this.listBoxTeams.Name = "listBoxTeams";
-            this.listBoxTeams.Size = new System.Drawing.Size(131, 212);
+            this.listBoxTeams.Size = new System.Drawing.Size(165, 212);
             this.listBoxTeams.TabIndex = 2;
             this.listBoxTeams.SelectedIndexChanged += new System.EventHandler(this.listBoxTeams_SelectedIndexChanged);
             // 
@@ -59,13 +59,13 @@
             this.listBoxPlayers.FormattingEnabled = true;
             this.listBoxPlayers.Location = new System.Drawing.Point(302, 87);
             this.listBoxPlayers.Name = "listBoxPlayers";
-            this.listBoxPlayers.Size = new System.Drawing.Size(138, 212);
+            this.listBoxPlayers.Size = new System.Drawing.Size(283, 212);
             this.listBoxPlayers.TabIndex = 3;
             // 
             // labelTeams
             // 
             this.labelTeams.AutoSize = true;
-            this.labelTeams.Location = new System.Drawing.Point(109, 41);
+            this.labelTeams.Location = new System.Drawing.Point(126, 41);
             this.labelTeams.Name = "labelTeams";
             this.labelTeams.Size = new System.Drawing.Size(57, 13);
             this.labelTeams.TabIndex = 4;
@@ -74,7 +74,7 @@
             // labelPlayers
             // 
             this.labelPlayers.AutoSize = true;
-            this.labelPlayers.Location = new System.Drawing.Point(302, 41);
+            this.labelPlayers.Location = new System.Drawing.Point(421, 41);
             this.labelPlayers.Name = "labelPlayers";
             this.labelPlayers.Size = new System.Drawing.Size(47, 13);
             this.labelPlayers.TabIndex = 5;
