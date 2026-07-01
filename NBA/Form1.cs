@@ -29,6 +29,7 @@ namespace NBA
             {
                 listBoxTeams.Items.Add(team);
             }
+            MessageBox.Show($"Загружено {teams.Count} команд", "Готово");
         }
 
         private void listBoxTeams_SelectedIndexChanged(object sender, EventArgs e)
