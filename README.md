@@ -1,4 +1,4 @@
-\# NBA Teams \& Players
+# NBA Teams \& Players
 
 
 
@@ -6,39 +6,39 @@
 
 
 
-\## Технологии
+## Технологии
 
-\- C# WinForms (.NET Framework)
+- C# WinForms (.NET Framework)
 
-\- Balldontlie API
+- Balldontlie API
 
-\- Newtonsoft.Json
-
-
-
-\## Функционал
-
-\- Загрузка списка всех команд НБА
-
-\- Просмотр игроков выбранной команды
-
-\- Информация: имя, позиция, рост, вес, страна
+- Newtonsoft.Json
 
 
 
-\## Как запустить
+## Функционал
 
-1\. Открыть NBA.sln в Visual Studio
+- Загрузка списка всех команд НБА
 
-2\. Нажать F5
+- Просмотр игроков выбранной команды
+
+- Информация: имя, позиция, рост, вес, страна
 
 
 
-\## API
+## Как запустить
+
+1. Открыть NBA.sln в Visual Studio
+
+2. Нажать F5
+
+
+
+## API
 
 Используется \[balldontlie API](https://balldontlie.io)
 
-\- GET /v1/teams — список команд
+- GET /v1/teams — список команд
 
-\- GET /v1/players — игроки команды
+- GET /v1/players — игроки команды
 
