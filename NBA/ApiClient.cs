@@ -22,38 +22,56 @@ namespace NBA
 
         public List<Team> GetTeams()
         {
-            string url = baseUrl + "teams";
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            try
+            {
+                string url = baseUrl + "teams";
+                HttpResponseMessage response = client.GetAsync(url).Result;
 
-            if (response.IsSuccessStatusCode)
-            {
-                string json = response.Content.ReadAsStringAsync().Result;
-                var result = JsonConvert.DeserializeObject<TeamResponse>(json);
-                return result.data;
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+                    var result = JsonConvert.DeserializeObject<TeamResponse>(json);
+                    return result.data;
+                }
+                else
+                {
+                    MessageBox.Show($"Ошибка: {response.StatusCode}");
+                    return new List<Team>();
+                }
             }
-            else
+            catch (HttpRequestException)
             {
-                MessageBox.Show($"Ошибка: {response.StatusCode}");
+                MessageBox.Show("Нет подключения к интернету");
                 return new List<Team>();
             }
         }
 
         public List<Player> GetPlayers(int teamId)
         {
-            string url = baseUrl + $"players?team_ids[]={teamId}&per_page=25";
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            try
+            {
+                string url = baseUrl + $"players?team_ids[]={teamId}&per_page=25";
+                HttpResponseMessage response = client.GetAsync(url).Result;
 
-            if (response.IsSuccessStatusCode)
-            {
-                string json = response.Content.ReadAsStringAsync().Result;
-                var result = JsonConvert.DeserializeObject<PlayerResponse>(json);
-                return result.data;
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+                    var result = JsonConvert.DeserializeObject<PlayerResponse>(json);
+                    return result.data;
+                }
+                else
+                {
+                    MessageBox.Show($"Ошибка: {response.StatusCode}");
+                    return new List<Player>();
+                }
             }
-            else
+            catch (HttpRequestException)
             {
-                MessageBox.Show($"Ошибка: {response.StatusCode}");
+                MessageBox.Show("Нет подключения к интернету");
                 return new List<Player>();
             }
         }
     }
+
 }
+
