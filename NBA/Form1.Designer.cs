@@ -43,6 +43,7 @@
             this.btnLoadTeams.TabIndex = 0;
             this.btnLoadTeams.Text = "Загрузить команды";
             this.btnLoadTeams.UseVisualStyleBackColor = true;
+            this.btnLoadTeams.Click += new System.EventHandler(this.btnLoadTeams_Click);
             // 
             // listBoxTeams
             // 
@@ -51,6 +52,7 @@
             this.listBoxTeams.Name = "listBoxTeams";
             this.listBoxTeams.Size = new System.Drawing.Size(131, 212);
             this.listBoxTeams.TabIndex = 2;
+            this.listBoxTeams.SelectedIndexChanged += new System.EventHandler(this.listBoxTeams_SelectedIndexChanged);
             // 
             // listBoxPlayers
             // 
