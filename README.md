@@ -36,9 +36,9 @@
 
 ## API
 
-Используется \[balldontlie API](https://balldontlie.io)
+Используется [balldontlie API](https://balldontlie.io)
 
-- GET /v1/teams — список команд
+- GET v1teams — список команд
 
-- GET /v1/players — игроки команды
+- GET v1players — игроки команды
 
