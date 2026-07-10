@@ -18,7 +18,7 @@ namespace NBA
 
         public override string ToString()
         {
-            return full_name;
+            return $"{full_name,-35} | {conference,-5} | {division}";
         }
     }
 }
