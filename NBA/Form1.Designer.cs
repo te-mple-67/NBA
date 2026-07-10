@@ -41,7 +41,7 @@
             this.btnLoadTeams.Name = "btnLoadTeams";
             this.btnLoadTeams.Size = new System.Drawing.Size(131, 35);
             this.btnLoadTeams.TabIndex = 0;
-            this.btnLoadTeams.Text = "Загрузить команды";
+            this.btnLoadTeams.Text = "🔄 Загрузить команды";
             this.btnLoadTeams.UseVisualStyleBackColor = true;
             this.btnLoadTeams.Click += new System.EventHandler(this.btnLoadTeams_Click);
             // 
@@ -65,20 +65,21 @@
             // labelTeams
             // 
             this.labelTeams.AutoSize = true;
-            this.labelTeams.Location = new System.Drawing.Point(126, 41);
+            this.labelTeams.Location = new System.Drawing.Point(101, 41);
             this.labelTeams.Name = "labelTeams";
-            this.labelTeams.Size = new System.Drawing.Size(57, 13);
+            this.labelTeams.Size = new System.Drawing.Size(97, 13);
             this.labelTeams.TabIndex = 4;
-            this.labelTeams.Text = "Команды:";
+            this.labelTeams.Text = "🏆 Команды НБА:";
+            this.labelTeams.Click += new System.EventHandler(this.labelTeams_Click);
             // 
             // labelPlayers
             // 
             this.labelPlayers.AutoSize = true;
-            this.labelPlayers.Location = new System.Drawing.Point(421, 41);
+            this.labelPlayers.Location = new System.Drawing.Point(397, 41);
             this.labelPlayers.Name = "labelPlayers";
-            this.labelPlayers.Size = new System.Drawing.Size(47, 13);
+            this.labelPlayers.Size = new System.Drawing.Size(111, 13);
             this.labelPlayers.TabIndex = 5;
-            this.labelPlayers.Text = "Игроки:";
+            this.labelPlayers.Text = "👤 Игроки команды:";
             // 
             // Form1
             // 
@@ -91,7 +92,7 @@
             this.Controls.Add(this.listBoxTeams);
             this.Controls.Add(this.btnLoadTeams);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "🏀 NBA: Команды и игроки";
             this.ResumeLayout(false);
             this.PerformLayout();
 

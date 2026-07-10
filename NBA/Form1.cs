@@ -47,5 +47,10 @@ namespace NBA
                 }
             }
         }
+
+        private void labelTeams_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
